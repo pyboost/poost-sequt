@@ -4,12 +4,12 @@
 # Created 6/18/2013, updated 6/18/2013
 #
 """ Additional utilities and helper functions for Python sequence types,
-    e.g. list, tuple, str ..., or any other ojects obey the sequence protocol
-    in Python's abstract objects layer.
+    e.g. list, tuple, str ..., or any other ojects that obey the sequence
+    protocol in Python's abstract objects layer.
 """
 from __future__ import absolute_import
 
-__version__ = '0.1.1'
+print('Executing %s' %  __file__)
 
 import sys
 if sys.version_info[:2] < (2, 6):
@@ -19,3 +19,6 @@ if sys.version_info[:2] < (2, 6):
 from .chunking import *
 
 del sys, absolute_import
+
+__version__ = '0.1.1'
+

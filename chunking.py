@@ -10,6 +10,7 @@ __all__ = [
     'chunked_by_partsize',
     'chunked_by_numparts',
 ]
+print('Executing %s' %  __file__)
 
 import os, sys, time, random
 

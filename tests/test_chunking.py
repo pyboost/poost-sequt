@@ -6,6 +6,7 @@
 #
 """ Unit tests for chunking.py
 """
+print('Executing %s' %  __file__)
 
 import unittest
 import os, sys, time
