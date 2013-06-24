@@ -5,6 +5,10 @@
 # Created 6/18/2013, updated 6/18/2013
 #
 """ Utilities for dividing a sequence into multiple chunks.
+
+TODO/TOREAD:
+http://code.activestate.com/recipes/542194/
+http://code.activestate.com/recipes/521877/
 """
 __all__ = [
     'chunked_by_partsize',
