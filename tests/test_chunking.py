@@ -11,7 +11,7 @@ print('Executing %s' %  __file__)
 import unittest
 import os, sys, time
 
-import sequtils
+import poost.sequtils as sequtils
 
 class Test_chunking (unittest.TestCase):
     """
