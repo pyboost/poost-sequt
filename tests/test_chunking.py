@@ -11,7 +11,7 @@ print('Executing %s' %  __file__)
 import unittest
 import os, sys, time
 
-import poost.sequtils as sequtils
+import poost.sequt as sequt
 
 class Test_chunking (unittest.TestCase):
     """
@@ -20,7 +20,7 @@ class Test_chunking (unittest.TestCase):
         self.seq1 = range(15)
 
     def test_chunked_by_partsize_divisible (self):
-        parts1 = sequtils.chunked_by_partsize (self.seq1, partsize=5)
+        parts1 = sequt.chunked_by_partsize (self.seq1, partsize=5)
         expected1 = [
             [0, 1, 2, 3, 4],
             [5, 6, 7, 8, 9],
@@ -29,7 +29,7 @@ class Test_chunking (unittest.TestCase):
         self.assertListEqual (parts1, expected1)
 
     def test_chunked_by_partsize_nondivisible (self):
-        parts1 = sequtils.chunked_by_partsize (self.seq1, 4)
+        parts1 = sequt.chunked_by_partsize (self.seq1, 4)
         expected1 = [
             [0, 1, 2, 3],
             [4, 5, 6, 7],
@@ -39,7 +39,7 @@ class Test_chunking (unittest.TestCase):
         self.assertListEqual (parts1, expected1)
 
     def test_chunked_by_numparts_divisible (self):
-        parts1 = sequtils.chunked_by_numparts (self.seq1, numparts=5)
+        parts1 = sequt.chunked_by_numparts (self.seq1, numparts=5)
         expected1 = [
             [0, 1, 2],
             [3, 4, 5],
@@ -50,7 +50,7 @@ class Test_chunking (unittest.TestCase):
         self.assertListEqual (parts1, expected1)
 
     def test_chunked_by_numparts_nondivisible (self):
-        parts1 = sequtils.chunked_by_numparts (self.seq1, 6)
+        parts1 = sequt.chunked_by_numparts (self.seq1, 6)
         expected1 = [
             [0, 1, 12],
             [2, 3, 13],
